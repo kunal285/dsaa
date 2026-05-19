@@ -56,7 +56,8 @@ public class HospitalAppointmentSystem {
     private static void testInvalidPatient() {
         try {
             System.out.println("Attempting to create patient with empty name...");
-            new Patient("P099", "", 30, "9999999999");
+            Patient invalidPatient = new Patient("P099", "", 30, "9999999999");
+            invalidPatient.toString(); // referenced to silence analyzer
         } catch (AppointmentException e) {
             System.out.println("✓ Caught: " + e.getMessage());
         }

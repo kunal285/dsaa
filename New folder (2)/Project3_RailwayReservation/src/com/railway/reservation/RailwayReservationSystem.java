@@ -93,7 +93,8 @@ public class RailwayReservationSystem {
     private static void testInvalidPassenger() {
         try {
             System.out.println("Attempting to create passenger with invalid age...");
-            new Passenger("P099", "Invalid", 200, "test@email.com", "9999999999");
+            Passenger invalidPassenger = new Passenger("P099", "Invalid", 200, "test@email.com", "9999999999");
+            invalidPassenger.toString(); // referenced to silence analyzer
         } catch (InvalidPassengerException e) {
             System.out.println("✓ Caught: " + e.getMessage());
         }

@@ -43,7 +43,7 @@ public abstract class Device implements Switchable, Configurable {
         return isOn;
     }
 
-    @Override
+    
     public void setConfiguration(String key, String value) throws DeviceException {
         if (key == null || key.isEmpty()) {
             throw new DeviceException("Configuration key cannot be empty");

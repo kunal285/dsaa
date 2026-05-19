@@ -70,7 +70,8 @@ public class PayrollManagementSystem {
     private static void testInvalidSalary() {
         try {
             System.out.println("Attempting to create manager with negative salary...");
-            new Manager("E099", "Test Manager", -50000.0, 5);
+            Manager testManager = new Manager("E099", "Test Manager", -50000.0, 5);
+            testManager.toString(); // referenced to silence analyzer
         } catch (InvalidSalaryException e) {
             System.out.println("✓ Caught: " + e.getMessage());
         }

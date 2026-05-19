@@ -9,7 +9,7 @@ import com.bank.accounts.models.Transaction;
  * Main class for Banking System with Transaction History
  */
 public class BankingSystem {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws InsufficientBalanceException {
         try {
             System.out.println("=== Banking System with Transaction History ===\n");
 

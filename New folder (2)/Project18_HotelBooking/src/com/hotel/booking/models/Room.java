@@ -20,7 +20,7 @@ public final class Room {
     public String getRoomId() { return roomId; }
 }
 
-class Booking {
+public class Booking {
     private final String bookingId;
     private final String roomId;
     private final int nights;
